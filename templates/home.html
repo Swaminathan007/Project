@@ -1,0 +1,79 @@
+{%extends "base.html"%}
+{%block title%}Home{%endblock%}
+
+{%block content%}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blogg</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container text-center mt-5">
+        <h1>Welcome to  Blogg</h1>
+        <p>Share your insightful articles and stories and experiences with the world...</p>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/Uk5_jBq3PkdHtSE1uwT9JeADlXpfs-B-GBe2CpwBFZQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5tYWNwaHVuLmNv/bS9pbWcvdXBsb2Fk/cy9jdXN0b21lci9i/bG9nLzIwNzYvMTY4/NjEyOTIxNzY0ODA0/YTQxOTNlMTIxLjc5/NzI3NDAzLmpwZWc_/cT04NSZ3PTg0MA" class="card-img-top" alt="Blog Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Post 1</h5>
+                        <p class="card-text">The most wonderful experience</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/1Q4RW087FwdhCwD_j2N2W-XA-L6MsArnLxaKqI113Rg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubWFjcnVtb3Jz/LmNvbS90L1YyaHZl/dVU2MnJESmdkZUdl/UEFZSEJYQU8tcz0v/NDAweDQwMC9zbWFy/dC9hcnRpY2xlLW5l/dy8yMDIzLzEwL2lP/Uy0xNy4xLVVwZGF0/ZS1BdmFpbGFibGUt/TmV4dC1XZWVrLVdp/dGgtTmV3LUZlYXR1/cmVzLTIuanBn" class="card-img-top" alt="Blog Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Post 2</h5>
+                        <p class="card-text">How is the new IOS?</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/2fRsTRWeYjBsg3gSAFVorZcTGlV0rAPS4b_1E4N-pgc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlltVXdOekl5/WVdVdE9HRXpOaTAw/WlRRekxUZzFOakV0/WTJWaVlqQXlOekF6/TnpnNVhrRXlYa0Zx/Y0dkZVFXdGhjMmhw/YTJGNC5fVjFfUUw3/NV9VWTI4MV9DUjAs/MCw1MDAsMjgxXy5q/cGc" class="card-img-top" alt="Blog Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Post 3</h5>
+                        <p class="card-text">Review for leo</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container my-5 shadow p-3">
+        <div class="row text-center">
+            <h4>Start sharing your ideas with the world</h4>
+        </div>
+        <div class="row text-center">
+            <h5>Don't have an account <a href="/signup" class="btn btn-success">Signup</a></h5>
+            <h5>Already a user <a href="/login" class = "btn btn-success">Login</a> </h5>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+{%endblock%}

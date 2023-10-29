@@ -1,0 +1,45 @@
+{%extends "base.html"%}
+{%block title%}{%endblock%}
+
+{%block content%}
+    <div class="container text-center mt-5">
+        <div class="container">
+            {%for message in get_flashed_messages()%}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {%endfor%}
+        </div>
+        <div class="container" style="text-align: left;">
+            <h3>Hi, {{current_user.username}}</h3>
+        </div>
+        {%if posts == []%}
+            <p>No posts, <a href="/createpost" class="btn btn-primary">Create post</a></p>
+        {%else%}
+                <div class="container mt-5 mb-4 text-align-left">
+                    {%for post in posts%}
+                        <div class="container shadow p-4 d-flex flex-row align-items-center justify-content-center"
+                        style="border-radius:10px;">
+                            <div class="container">
+                                <div class="left"></div>
+                                <h3><a href="/view/{{post.id}}" style="color: black;text-decoration:none">{{post.header}}</a></h3>
+                            </div>
+                            <div class="container">
+                                Created: <strong>{{post.time}}</strong>
+                            </div>
+                            <div class="container">
+                                <a href="/delete/{{post.id}}" class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></a>
+                                <a href="/update/{{post.id}}" class="btn btn-outline-success"><i class="bi bi-pen-fill"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+            {%endfor%}
+            <div class="container mt-2 text-center">
+                <a href="/createpost" class="btn btn-primary">Add post</a></p>
+            </div>
+        {%endif%}
+
+    </div>
+{%endblock%}
